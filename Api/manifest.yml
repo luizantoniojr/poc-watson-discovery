@@ -1,0 +1,12 @@
+---
+applications:
+- instances: 1
+  timeout: 180
+  name: ExpressjsBackendCTNUZ
+  buildpack: sdk-for-nodejs
+  command: npm start
+  memory: 256M
+  domain: mybluemix.net
+  host: expressjs-backend-ctnuz
+  services:
+    - expressjs-backend-ctnuz-discovery-1529450081092
