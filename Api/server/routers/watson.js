@@ -15,9 +15,9 @@ module.exports = function (app) {
 
     var params = {
       'natural_language_query': query,
-      'environment_id': 'system',
-      'collection_id': 'news-en',
-      return: 'text, title'
+      'environment_id': 'bc95484a-1f3d-41af-944e-30c3fdc7bb13',
+      'collection_id': '498694b7-9194-4b44-ae65-c4e5d473ebeb',
+      return: 'titulo, descricao, link'
     }
 
     discovery.query(params, (error, results) => {

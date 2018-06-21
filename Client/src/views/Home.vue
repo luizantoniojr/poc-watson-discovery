@@ -13,13 +13,12 @@
           ></v-text-field>
         <v-card>
         <v-list three-line v-show="!!resultado">
-          <template v-for="(item, index) in resultado">
-            <v-subheader v-if="item.header" :key="item.id">{{ item.title }}</v-subheader>
-            <v-divider v-else-if="item.divider" :inset="item.inset" :key="index"></v-divider>
-            <v-list-tile v-else :key="item.id" avatar >
+          <template v-for="item in resultado">
+            <v-subheader v-if="item.header" :key="item.id">{{ item.titulo }}</v-subheader>
+            <v-list-tile v-else :key="item.id" avatar :href="item.link">
               <v-list-tile-content>
-                <v-list-tile-title v-html="item.title"></v-list-tile-title>
-                <v-list-tile-sub-title v-html="item.text"></v-list-tile-sub-title>
+                <v-list-tile-title v-html="item.titulo" ></v-list-tile-title>
+                <v-list-tile-sub-title v-html="item.descricao"></v-list-tile-sub-title>
               </v-list-tile-content>
             </v-list-tile>
           </template>
